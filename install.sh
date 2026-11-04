@@ -15,14 +15,26 @@ git config --global alias.co "checkout"
 git config --global alias.br "branch -a -v"
 git config --global alias.lg "log --graph --oneline --decorate"
 
-# 2. Symlink VS Code Settings (if settings.json exists in your dotfiles repo)
+# 2. Install System Dependencies (ripgrep & Java Runtime)
+echo "Installing system packages..."
+if command -v apt-get &> /dev/null; then
+    sudo apt-get update && sudo apt-get install -y ripgrep default-jdk
+fi
+
+# 3. Install Salesforce CLI Plugins
+if command -v sf &> /dev/null; then
+    echo "Installing Salesforce CLI plugins..."
+    sf plugins install code-analyzer
+fi
+
+# 4. Symlink VS Code Settings (if settings.json exists in your dotfiles repo)
 if [ -f "$HOME/dotfiles/settings.json" ]; then
     echo "Linking VS Code settings..."
     mkdir -p "$HOME/.vscode-remote/data/Machine"
     ln -sf "$HOME/dotfiles/settings.json" "$HOME/.vscode-remote/data/Machine/settings.json"
 fi
 
-# 3. Install VS Code Extensions
+# 5. Install VS Code Extensions
 echo "Installing VS Code extensions..."
 code --install-extension salesforce.salesforcedx-vscode
 code --install-extension salesforce.salesforcedx-vscode-agents
@@ -36,7 +48,7 @@ code --install-extension redhat.vscode-yaml
 code --install-extension yzane.markdown-all-in-one
 code --install-extension gruntfuggly.todo-tree
 
-# 4. Cleanup & Reload
+# 6. Cleanup & Reload
 echo "Cleaning up caches..."
 rm -rf ~/.cache/vscode-python ~/.cache/typescript
 
