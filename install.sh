@@ -36,7 +36,7 @@ fi
 
 # 5. Install VS Code Extensions
 echo "Installing VS Code extensions..."
-code --install-extension salesforce.salesforcedx-vscode
+code --install-extension salesforce.salesforcedx-vscode-expanded
 code --install-extension salesforce.salesforcedx-vscode-agents
 code --install-extension anthropic.claude-code
 code --install-extension dbaeumer.vscode-eslint
