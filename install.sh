@@ -15,10 +15,10 @@ git config --global alias.co "checkout"
 git config --global alias.br "branch -a -v"
 git config --global alias.lg "log --graph --oneline --decorate"
 
-# 2. Install System Dependencies (ripgrep & Java Runtime)
+# 2. Install System Dependencies (ripgrep & JDK 21)
 echo "Installing system packages..."
 if command -v apt-get &> /dev/null; then
-    sudo apt-get update && sudo apt-get install -y ripgrep default-jdk
+    sudo apt-get update && sudo apt-get install -y ripgrep openjdk-21-jdk
 fi
 
 # 3. Install Salesforce CLI Plugins
