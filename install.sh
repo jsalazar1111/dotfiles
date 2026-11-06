@@ -1,5 +1,4 @@
 #!/bin/bash
-
 echo "Starting dotfiles setup..."
 
 # 1. Configure Global Git Settings
@@ -15,26 +14,41 @@ git config --global alias.co "checkout"
 git config --global alias.br "branch -a -v"
 git config --global alias.lg "log --graph --oneline --decorate"
 
-# 2. Install System Dependencies (ripgrep & JDK 21)
+# 2. Install System Dependencies
 echo "Installing system packages..."
 if command -v apt-get &> /dev/null; then
-    sudo apt-get update && sudo apt-get install -y ripgrep openjdk-21-jdk
+  sudo apt-get update && sudo apt-get install -y ripgrep openjdk-21-jdk
 fi
 
-# 3. Install Salesforce CLI Plugins
+# 3. Install Global npm Packages
+if command -v npm &> /dev/null; then
+  echo "Installing global npm packages..."
+  sudo npm install -g @salesforce/cli @anthropic-ai/claude-code
+fi
+
+# 4. Install Salesforce CLI Plugins
 if command -v sf &> /dev/null; then
-    echo "Installing Salesforce CLI plugins..."
-    sf plugins install code-analyzer
+  echo "Installing Salesforce CLI plugins..."
+  sf plugins install code-analyzer
 fi
 
-# 4. Symlink VS Code Settings (if settings.json exists in your dotfiles repo)
+# 5. Install Claude Code Plugins
+if command -v claude &> /dev/null; then
+  echo "Installing Claude Code plugins..."
+  claude plugin marketplace add obra/superpowers-marketplace
+  claude plugin install superpowers@superpowers-marketplace --scope user
+  claude plugin marketplace add mattpocock/skills
+  claude plugin install mattpocock-skills@mattpocock --scope user
+fi
+
+# 6. Symlink VS Code Settings
 if [ -f "$HOME/dotfiles/settings.json" ]; then
-    echo "Linking VS Code settings..."
-    mkdir -p "$HOME/.vscode-remote/data/Machine"
-    ln -sf "$HOME/dotfiles/settings.json" "$HOME/.vscode-remote/data/Machine/settings.json"
+  echo "Linking VS Code settings..."
+  mkdir -p "$HOME/.vscode-remote/data/Machine"
+  ln -sf "$HOME/dotfiles/settings.json" "$HOME/.vscode-remote/data/Machine/settings.json"
 fi
 
-# 5. Install VS Code Extensions
+# 7. Install VS Code Extensions
 echo "Installing VS Code extensions..."
 code --install-extension salesforce.salesforcedx-vscode-expanded
 code --install-extension salesforce.salesforcedx-vscode-agents
@@ -48,7 +62,7 @@ code --install-extension redhat.vscode-yaml
 code --install-extension yzane.markdown-all-in-one
 code --install-extension gruntfuggly.todo-tree
 
-# 6. Cleanup & Reload
+# 8. Cleanup & Reload
 echo "Cleaning up caches..."
 rm -rf ~/.cache/vscode-python ~/.cache/typescript
 
