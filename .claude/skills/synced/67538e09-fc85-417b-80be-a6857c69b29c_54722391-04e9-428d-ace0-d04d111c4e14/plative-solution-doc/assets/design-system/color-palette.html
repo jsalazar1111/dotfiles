@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Plative — Color Palette</title>
+<link rel="stylesheet" href="tokens.css" />
+<style>
+  html, body { margin: 0; background: var(--bg-page); color: var(--text-primary); }
+  body { font-family: var(--font-sans); padding: 56px 64px; box-sizing: border-box; width: 1280px; }
+  .head { display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 36px; }
+  .head .meta { color: var(--text-muted); font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 600; }
+  .group-title { display: flex; align-items: center; gap: 16px; margin: 28px 0 14px; }
+  .group-title h2 { font-size: 13px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--plative-graphite); margin: 0; }
+  .group-title .line { flex: 1; height: 1px; background: var(--border); }
+
+  .row { display: grid; gap: 16px; }
+  .row.primary   { grid-template-columns: 2fr 1.2fr 1.2fr; }
+  .row.secondary { grid-template-columns: repeat(4, 1fr); }
+  .row.neutrals  { grid-template-columns: repeat(8, 1fr); }
+
+  .swatch {
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    background: #fff;
+    display: flex; flex-direction: column;
+    box-shadow: 0 1px 2px rgba(38,42,66,0.04);
+  }
+  .chip { padding: 22px 18px 18px; min-height: 110px; position: relative; }
+  .chip .name { font-weight: 600; font-size: 16px; line-height: 1.2; }
+  .chip .role { font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; opacity: 0.78; margin-top: 6px; font-weight: 600; }
+  .chip.dot::after {
+    content: ""; position: absolute; right: 16px; top: 16px; width: 10px; height: 10px; border-radius: 50%;
+    background: rgba(255,255,255,0.85); box-shadow: 0 0 0 2px rgba(255,255,255,0.25);
+  }
+  .meta-block { padding: 12px 14px 14px; font-size: 11px; line-height: 1.55; color: var(--plative-graphite); border-top: 1px solid var(--border); display: grid; grid-template-columns: 38px 1fr; gap: 4px 8px; font-variant-numeric: tabular-nums; }
+  .meta-block dt { font-weight: 700; color: var(--plative-slate); letter-spacing: 0.08em; text-transform: uppercase; font-size: 9.5px; align-self: center; }
+  .meta-block dd { margin: 0; font-weight: 500; color: var(--plative-ink); }
+
+  .row.neutrals .chip { min-height: 84px; padding: 14px 12px 12px; }
+  .row.neutrals .name { font-size: 12px; }
+  .row.neutrals .role { font-size: 9.5px; letter-spacing: 0.12em; }
+  .row.neutrals .meta-block { grid-template-columns: 1fr; gap: 0; padding: 8px 12px 10px; font-size: 10px; }
+  .row.neutrals .meta-block dt { display: none; }
+
+  .footnote { color: var(--text-muted); font-size: 12px; margin-top: 28px; line-height: 1.5; max-width: 740px; }
+  .footnote b { color: var(--text-primary); font-weight: 600; }
+</style>
+</head>
+<body>
+
+<div class="head">
+  <div>
+    <div class="t-eyebrow">Plative · Color</div>
+    <h1 class="t-display" style="margin:6px 0 0;">Color palette</h1>
+  </div>
+  <div class="meta">Brand Guidelines · 02.2026</div>
+</div>
+
+<div class="group-title"><h2>Primary brand colors</h2><div class="line"></div></div>
+<div class="row primary">
+
+  <div class="swatch">
+    <div class="chip dot" style="background:#E14136; color:#fff;">
+      <div class="role">Primary accent</div>
+      <div class="name">Crimson</div>
+    </div>
+    <dl class="meta-block">
+      <dt>HEX</dt><dd>#E14136</dd>
+      <dt>RGB</dt><dd>225 · 65 · 54</dd>
+      <dt>CMYK</dt><dd>0 · 96 · 93 · 0</dd>
+    </dl>
+  </div>
+
+  <div class="swatch">
+    <div class="chip dot" style="background:#262A42; color:#fff;">
+      <div class="role">Primary dark</div>
+      <div class="name">Navy Blue</div>
+    </div>
+    <dl class="meta-block">
+      <dt>HEX</dt><dd>#262A42</dd>
+      <dt>RGB</dt><dd>38 · 42 · 66</dd>
+      <dt>CMYK</dt><dd>88 · 81 · 46 · 47</dd>
+    </dl>
+  </div>
+
+  <div class="swatch">
+    <div class="chip dot" style="background:#425582; color:#fff;">
+      <div class="role">Primary mid</div>
+      <div class="name">Soft Navy</div>
+    </div>
+    <dl class="meta-block">
+      <dt>HEX</dt><dd>#425582</dd>
+      <dt>RGB</dt><dd>66 · 85 · 130</dd>
+      <dt>CMYK</dt><dd>86 · 76 · 24 · 7</dd>
+    </dl>
+  </div>
+
+</div>
+
+<div class="group-title"><h2>Secondary brand colors</h2><div class="line"></div></div>
+<div class="row secondary">
+
+  <div class="swatch">
+    <div class="chip dot" style="background:#005957; color:#fff;">
+      <div class="role">Secondary</div>
+      <div class="name">Deep Teal</div>
+    </div>
+    <dl class="meta-block">
+      <dt>HEX</dt><dd>#005957</dd>
+      <dt>RGB</dt><dd>0 · 89 · 87</dd>
+      <dt>CMYK</dt><dd>100 · 42 · 62 · 29</dd>
+    </dl>
+  </div>
+
+  <div class="swatch">
+    <div class="chip dot" style="background:#0D9DA4; color:#fff;">
+      <div class="role">Secondary</div>
+      <div class="name">Teal</div>
+    </div>
+    <dl class="meta-block">
+      <dt>HEX</dt><dd>#0D9DA4</dd>
+      <dt>RGB</dt><dd>13 · 157 · 164</dd>
+      <dt>CMYK</dt><dd>90 · 12 · 38 · 0</dd>
+    </dl>
+  </div>
+
+  <div class="swatch">
+    <div class="chip" style="background:#9CDAE6; color:#1A1D2E;">
+      <div class="role" style="opacity:.65;">Secondary</div>
+      <div class="name">Soft Teal</div>
+    </div>
+    <dl class="meta-block">
+      <dt>HEX</dt><dd>#9CDAE6</dd>
+      <dt>RGB</dt><dd>156 · 218 · 230</dd>
+      <dt>CMYK</dt><dd>41 · 0 · 10 · 0</dd>
+    </dl>
+  </div>
+
+  <div class="swatch">
+    <div class="chip" style="background:#DEAB57; color:#1A1D2E;">
+      <div class="role" style="opacity:.65;">Secondary</div>
+      <div class="name">Gold</div>
+    </div>
+    <dl class="meta-block">
+      <dt>HEX</dt><dd>#DEAB57</dd>
+      <dt>RGB</dt><dd>222 · 171 · 87</dd>
+      <dt>CMYK</dt><dd>8 · 36 · 85 · 0</dd>
+    </dl>
+  </div>
+
+</div>
+
+<div class="group-title"><h2>Neutrals · derived</h2><div class="line"></div></div>
+<div class="row neutrals">
+  <div class="swatch"><div class="chip dot" style="background:#0E1020;color:#fff;"><div class="name">Black</div></div><dl class="meta-block"><dd>#0E1020</dd></dl></div>
+  <div class="swatch"><div class="chip dot" style="background:#1A1D2E;color:#fff;"><div class="name">Ink</div></div><dl class="meta-block"><dd>#1A1D2E</dd></dl></div>
+  <div class="swatch"><div class="chip dot" style="background:#4A4F66;color:#fff;"><div class="name">Graphite</div></div><dl class="meta-block"><dd>#4A4F66</dd></dl></div>
+  <div class="swatch"><div class="chip" style="background:#7C8299;color:#fff;"><div class="name">Slate</div></div><dl class="meta-block"><dd>#7C8299</dd></dl></div>
+  <div class="swatch"><div class="chip" style="background:#C9CDD9;color:#1A1D2E;"><div class="name">Mist</div></div><dl class="meta-block"><dd>#C9CDD9</dd></dl></div>
+  <div class="swatch"><div class="chip" style="background:#E6E8EE;color:#1A1D2E;"><div class="name">Fog</div></div><dl class="meta-block"><dd>#E6E8EE</dd></dl></div>
+  <div class="swatch"><div class="chip" style="background:#F5F6F8;color:#1A1D2E;"><div class="name">Paper</div></div><dl class="meta-block"><dd>#F5F6F8</dd></dl></div>
+  <div class="swatch"><div class="chip" style="background:#FFFFFF;color:#1A1D2E;border-bottom:1px solid var(--border);"><div class="name">White</div></div><dl class="meta-block"><dd>#FFFFFF</dd></dl></div>
+</div>
+
+<p class="footnote">
+  <b>Crimson</b> is the only accent color used for CTAs, key data points and brand moments — never used as a flood color.
+  <b>Navy Blue</b> and <b>Soft Navy</b> dominate dark surfaces; <b>Teal</b> and <b>Gold</b> are reserved for data viz, charts and supporting accents.
+</p>
+
+</body>
+</html>

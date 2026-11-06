@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Plative — Typography</title>
+<link rel="stylesheet" href="tokens.css" />
+<style>
+  html, body { margin: 0; background: #fff; color: var(--text-primary); }
+  body { font-family: var(--font-sans); padding: 56px 64px; box-sizing: border-box; width: 1280px; }
+  .head { display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 36px; }
+  .head .meta { color: var(--text-muted); font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 600; }
+
+  /* Specimen blocks */
+  .specimen { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 36px; }
+  .spec-card { background: #fff; border: 1px solid var(--border); border-radius: 12px; padding: 28px 30px; position: relative; overflow: hidden; }
+  .spec-card.dark { background: var(--plative-navy); color: #fff; border-color: transparent; }
+  .spec-card .label { font-size: 10.5px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--plative-graphite); margin-bottom: 14px; }
+  .spec-card.dark .label { color: rgba(255,255,255,0.6); }
+  .spec-card .glyph { font-size: 120px; line-height: 0.85; letter-spacing: -0.04em; margin: 4px 0 14px; }
+  .spec-card .pangram { font-size: 14px; line-height: 1.55; color: var(--plative-graphite); }
+  .spec-card.dark .pangram { color: rgba(255,255,255,0.7); }
+  .spec-card .face-name { display: flex; align-items: baseline; justify-content: space-between; margin-top: 18px; padding-top: 14px; border-top: 1px solid var(--border); font-size: 13px; }
+  .spec-card.dark .face-name { border-top-color: rgba(255,255,255,0.14); }
+  .spec-card .face-name b { font-weight: 600; }
+  .spec-card .face-name span { color: var(--plative-slate); font-variant-numeric: tabular-nums; }
+  .spec-card.dark .face-name span { color: rgba(255,255,255,0.55); }
+
+  /* Scale table */
+  .group-title { display: flex; align-items: center; gap: 16px; margin: 8px 0 18px; }
+  .group-title h2 { font-size: 13px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--plative-graphite); margin: 0; }
+  .group-title .line { flex: 1; height: 1px; background: var(--border); }
+
+  .scale { display: grid; gap: 0; border-top: 1px solid var(--border); }
+  .scale-row { display: grid; grid-template-columns: 92px 1fr 200px; gap: 24px; align-items: baseline; padding: 16px 4px; border-bottom: 1px solid var(--border); }
+  .scale-row .tag { font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--plative-slate); font-variant-numeric: tabular-nums; }
+  .scale-row .sample { color: var(--plative-navy); }
+  .scale-row .specs { font-size: 12px; color: var(--plative-graphite); font-variant-numeric: tabular-nums; text-align: right; }
+  .scale-row .specs b { color: var(--plative-ink); font-weight: 600; }
+
+  .s-display { font: 600 56px/1.05 var(--font-sans); letter-spacing: -0.02em; }
+  .s-h1 { font: 600 40px/1.1 var(--font-sans); letter-spacing: -0.018em; }
+  .s-h2 { font: 600 28px/1.15 var(--font-sans); letter-spacing: -0.012em; }
+  .s-h3 { font: 600 22px/1.2 var(--font-sans); }
+  .s-subtitle { font: 300 22px/1.35 var(--font-sans); color: var(--plative-graphite); }
+  .s-body { font: 400 16px/1.55 var(--font-sans); }
+  .s-caption { font: 400 13px/1.5 var(--font-sans); color: var(--plative-graphite); }
+  .s-eyebrow { font: 600 11px/1.4 var(--font-sans); letter-spacing: 0.16em; text-transform: uppercase; color: var(--plative-crimson); }
+</style>
+</head>
+<body>
+
+<div class="head">
+  <div>
+    <div class="t-eyebrow">Plative · Typography</div>
+    <h1 class="t-display" style="margin:6px 0 0;">Open Sans, the whole family.</h1>
+  </div>
+  <div class="meta">Brand Guidelines · 02.2026</div>
+</div>
+
+<div class="specimen">
+  <div class="spec-card">
+    <div class="label">Title face</div>
+    <div class="glyph" style="font-weight:600;">Aa</div>
+    <div class="pangram">The quick brown fox jumps over the lazy dog. 0123456789 &amp; ! ?</div>
+    <div class="face-name"><b>Open Sans Semi&nbsp;Bold</b><span>Weight 600</span></div>
+  </div>
+  <div class="spec-card dark">
+    <div class="label">Body face</div>
+    <div class="glyph" style="font-weight:400;">Aa</div>
+    <div class="pangram">The quick brown fox jumps over the lazy dog. 0123456789 &amp; ! ?</div>
+    <div class="face-name"><b>Open Sans Regular</b><span>Weight 400</span></div>
+  </div>
+</div>
+
+<div class="group-title"><h2>Type scale</h2><div class="line"></div></div>
+
+<div class="scale">
+
+  <div class="scale-row">
+    <div class="tag">Display</div>
+    <div class="sample s-display">Plative meets you, wherever you are.</div>
+    <div class="specs"><b>Semi&nbsp;Bold 56</b><br/>56 / 58 · −2%</div>
+  </div>
+
+  <div class="scale-row">
+    <div class="tag">H1</div>
+    <div class="sample s-h1">A modern visual system</div>
+    <div class="specs"><b>Semi&nbsp;Bold 40</b><br/>40 / 44 · −1.8%</div>
+  </div>
+
+  <div class="scale-row">
+    <div class="tag">H2</div>
+    <div class="sample s-h2">Section heading goes here</div>
+    <div class="specs"><b>Semi&nbsp;Bold 28</b><br/>28 / 32 · −1.2%</div>
+  </div>
+
+  <div class="scale-row">
+    <div class="tag">H3</div>
+    <div class="sample s-h3">Subsection or card title</div>
+    <div class="specs"><b>Semi&nbsp;Bold 22</b><br/>22 / 26</div>
+  </div>
+
+  <div class="scale-row">
+    <div class="tag">Subtitle</div>
+    <div class="sample s-subtitle">Open Sans Light supports titles with calm, airy contrast.</div>
+    <div class="specs"><b>Light 22</b><br/>22 / 30</div>
+  </div>
+
+  <div class="scale-row">
+    <div class="tag">Body</div>
+    <div class="sample s-body">Open Sans Regular is the workhorse for paragraph text. It was designed with an upright stress and open forms — neutral but friendly, optimized for print, web, and mobile.</div>
+    <div class="specs"><b>Regular 16</b><br/>16 / 25</div>
+  </div>
+
+  <div class="scale-row">
+    <div class="tag">Caption</div>
+    <div class="sample s-caption">Captions, helper text, and metadata sit in graphite at 13px.</div>
+    <div class="specs"><b>Regular 13</b><br/>13 / 19</div>
+  </div>
+
+  <div class="scale-row">
+    <div class="tag">Eyebrow</div>
+    <div class="sample s-eyebrow">Section label · category</div>
+    <div class="specs"><b>Semi&nbsp;Bold 11</b><br/>0.16em tracking</div>
+  </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,238 @@
+/* =====================================================================
+   PLATIVE BRAND TOKENS
+   Single source of truth for color, type, spacing.
+   ===================================================================== */
+
+/* Brand-supplied Open Sans family (variable + static) */
+@font-face {
+  font-family: 'Open Sans';
+  src: url('fonts/OpenSans-VariableFont_wdth_wght.ttf') format('truetype-variations');
+  font-weight: 300 800;
+  font-stretch: 75% 100%;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Open Sans';
+  src: url('fonts/OpenSans-Italic-VariableFont_wdth_wght.ttf') format('truetype-variations');
+  font-weight: 300 800;
+  font-stretch: 75% 100%;
+  font-style: italic;
+  font-display: swap;
+}
+/* Static fallbacks — referenced individually for older renderers / PDF export */
+@font-face { font-family: 'Open Sans'; src: url('fonts/OpenSans-Light.ttf')      format('truetype'); font-weight: 300; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Open Sans'; src: url('fonts/OpenSans-Regular.ttf')    format('truetype'); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Open Sans'; src: url('fonts/OpenSans-Medium.ttf')     format('truetype'); font-weight: 500; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Open Sans'; src: url('fonts/OpenSans-SemiBold.ttf')   format('truetype'); font-weight: 600; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Open Sans'; src: url('fonts/OpenSans-Bold.ttf')       format('truetype'); font-weight: 700; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Open Sans'; src: url('fonts/OpenSans-ExtraBold.ttf')  format('truetype'); font-weight: 800; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Open Sans'; src: url('fonts/OpenSans-LightItalic.ttf')    format('truetype'); font-weight: 300; font-style: italic; font-display: swap; }
+@font-face { font-family: 'Open Sans'; src: url('fonts/OpenSans-Italic.ttf')         format('truetype'); font-weight: 400; font-style: italic; font-display: swap; }
+@font-face { font-family: 'Open Sans'; src: url('fonts/OpenSans-MediumItalic.ttf')   format('truetype'); font-weight: 500; font-style: italic; font-display: swap; }
+@font-face { font-family: 'Open Sans'; src: url('fonts/OpenSans-SemiBoldItalic.ttf') format('truetype'); font-weight: 600; font-style: italic; font-display: swap; }
+@font-face { font-family: 'Open Sans'; src: url('fonts/OpenSans-BoldItalic.ttf')     format('truetype'); font-weight: 700; font-style: italic; font-display: swap; }
+@font-face { font-family: 'Open Sans'; src: url('fonts/OpenSans-ExtraBoldItalic.ttf') format('truetype'); font-weight: 800; font-style: italic; font-display: swap; }
+/* Condensed cuts (for tight metadata, eyebrows, dense tables) */
+@font-face { font-family: 'Open Sans Condensed'; src: url('fonts/OpenSans_Condensed-Light.ttf')     format('truetype'); font-weight: 300; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Open Sans Condensed'; src: url('fonts/OpenSans_Condensed-Regular.ttf')   format('truetype'); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Open Sans Condensed'; src: url('fonts/OpenSans_Condensed-Medium.ttf')    format('truetype'); font-weight: 500; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Open Sans Condensed'; src: url('fonts/OpenSans_Condensed-SemiBold.ttf')  format('truetype'); font-weight: 600; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Open Sans Condensed'; src: url('fonts/OpenSans_Condensed-Bold.ttf')      format('truetype'); font-weight: 700; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Open Sans Condensed'; src: url('fonts/OpenSans_Condensed-ExtraBold.ttf') format('truetype'); font-weight: 800; font-style: normal; font-display: swap; }
+
+:root {
+  /* ---------- Brand color: Primary ---------- */
+  --plative-crimson:    #E14136;   /* Primary brand red — accents, CTAs */
+  --plative-navy:       #262A42;   /* Primary deep navy — backgrounds, headlines */
+  --plative-soft-navy:  #425582;   /* Primary mid-navy — backgrounds, charts */
+
+  /* ---------- Brand color: Secondary ---------- */
+  --plative-deep-teal:  #005957;
+  --plative-teal:       #0D9DA4;
+  --plative-soft-teal:  #9CDAE6;
+  --plative-gold:       #DEAB57;
+
+  /* ---------- Neutrals (derived) ---------- */
+  --plative-black:      #0E1020;   /* near-black, sits on navy */
+  --plative-ink:        #1A1D2E;
+  --plative-graphite:   #4A4F66;
+  --plative-slate:      #7C8299;
+  --plative-mist:       #C9CDD9;
+  --plative-fog:        #E6E8EE;
+  --plative-paper:      #F5F6F8;
+  --plative-white:      #FFFFFF;
+
+  /* ---------- Semantic ---------- */
+  --bg-page:            var(--plative-white);
+  --bg-surface:         var(--plative-paper);
+  --bg-inverse:         var(--plative-navy);
+
+  --text-primary:       var(--plative-navy);
+  --text-secondary:     var(--plative-graphite);
+  --text-muted:         var(--plative-slate);
+  --text-on-dark:       var(--plative-white);
+  --text-on-dark-muted: #B7BDD2;
+
+  --accent:             var(--plative-crimson);
+  --accent-hover:       #C8362C;
+
+  --border:             var(--plative-fog);
+  --border-strong:      var(--plative-mist);
+  --rule-on-dark:       rgba(255,255,255,0.14);
+
+  /* ---------- Type ---------- */
+  --font-sans: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+
+  --fw-light:    300;
+  --fw-regular:  400;
+  --fw-medium:   500;
+  --fw-semibold: 600;
+  --fw-bold:     700;
+
+  /* Display & heading scale (1.25 modular) */
+  --t-display-xl: 88px;   /* hero / cover */
+  --t-display:    64px;   /* major slide titles */
+  --t-h1:         48px;
+  --t-h2:         36px;
+  --t-h3:         28px;
+  --t-h4:         22px;
+  --t-h5:         18px;
+  --t-body-lg:    20px;
+  --t-body:       16px;
+  --t-small:      14px;
+  --t-micro:      12px;
+  --t-eyebrow:    11px;
+
+  /* ---------- Radius ---------- */
+  --r-xs: 2px;
+  --r-sm: 4px;
+  --r-md: 6px;
+  --r-lg: 10px;
+  --r-xl: 16px;
+  --r-pill: 999px;
+
+  /* ---------- Elevation ---------- */
+  --shadow-sm: 0 1px 2px rgba(38, 42, 66, 0.06), 0 1px 1px rgba(38, 42, 66, 0.04);
+  --shadow-md: 0 4px 12px rgba(38, 42, 66, 0.08), 0 2px 4px rgba(38, 42, 66, 0.04);
+  --shadow-lg: 0 16px 40px rgba(38, 42, 66, 0.12), 0 4px 12px rgba(38, 42, 66, 0.06);
+  --shadow-card-on-dark: 0 18px 50px rgba(0,0,0,0.35);
+
+  /* ---------- Spacing scale (4px base) ---------- */
+  --s-1: 4px;
+  --s-2: 8px;
+  --s-3: 12px;
+  --s-4: 16px;
+  --s-5: 20px;
+  --s-6: 24px;
+  --s-8: 32px;
+  --s-10: 40px;
+  --s-12: 48px;
+  --s-16: 64px;
+  --s-20: 80px;
+  --s-24: 96px;
+
+  /* ---------- Motion ---------- */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --d-fast: 120ms;
+  --d-base: 220ms;
+  --d-slow: 420ms;
+}
+
+/* =====================================================================
+   Base text classes
+   ===================================================================== */
+
+.t-eyebrow {
+  font: var(--fw-semibold) var(--t-eyebrow)/1.4 var(--font-sans);
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--accent);
+}
+.t-display-xl { font: var(--fw-semibold) var(--t-display-xl)/1.02 var(--font-sans); letter-spacing: -0.025em; }
+.t-display    { font: var(--fw-semibold) var(--t-display)/1.05 var(--font-sans);    letter-spacing: -0.02em; }
+.t-h1         { font: var(--fw-semibold) var(--t-h1)/1.1 var(--font-sans);          letter-spacing: -0.018em; }
+.t-h2         { font: var(--fw-semibold) var(--t-h2)/1.15 var(--font-sans);         letter-spacing: -0.012em; }
+.t-h3         { font: var(--fw-semibold) var(--t-h3)/1.2 var(--font-sans);          letter-spacing: -0.008em; }
+.t-h4         { font: var(--fw-semibold) var(--t-h4)/1.3 var(--font-sans); }
+.t-h5         { font: var(--fw-semibold) var(--t-h5)/1.35 var(--font-sans); }
+.t-subtitle   { font: var(--fw-light) var(--t-h4)/1.4 var(--font-sans); color: var(--text-secondary); }
+.t-body-lg    { font: var(--fw-regular) var(--t-body-lg)/1.55 var(--font-sans); }
+.t-body       { font: var(--fw-regular) var(--t-body)/1.6 var(--font-sans); }
+.t-small      { font: var(--fw-regular) var(--t-small)/1.5 var(--font-sans); }
+.t-micro      { font: var(--fw-regular) var(--t-micro)/1.4 var(--font-sans); }
+.t-mono-num   { font-variant-numeric: tabular-nums; }
+
+/* =====================================================================
+   Components
+   ===================================================================== */
+
+/* Buttons --------------------------------------------------------------*/
+.btn {
+  display: inline-flex; align-items: center; justify-content: center;
+  gap: var(--s-2);
+  padding: 14px 28px;
+  font: var(--fw-semibold) var(--t-small)/1 var(--font-sans);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 1px solid transparent;
+  border-radius: var(--r-sm);
+  cursor: pointer;
+  transition: background var(--d-fast) var(--ease-out),
+              color var(--d-fast) var(--ease-out),
+              border-color var(--d-fast) var(--ease-out),
+              transform var(--d-fast) var(--ease-out);
+}
+.btn:active { transform: translateY(1px); }
+
+/* Primary: Crimson fill — the primary CTA on light surfaces */
+.btn-primary {
+  background: var(--plative-crimson);
+  color: #fff;
+}
+.btn-primary:hover { background: var(--accent-hover); }
+
+/* Secondary: outlined navy on light, used alongside primary */
+.btn-secondary {
+  background: transparent;
+  color: var(--plative-navy);
+  border-color: var(--plative-navy);
+}
+.btn-secondary:hover { background: var(--plative-navy); color: #fff; }
+
+/* On dark: white outline */
+.btn-on-dark {
+  background: transparent;
+  color: #fff;
+  border-color: rgba(255,255,255,0.7);
+}
+.btn-on-dark:hover { background: #fff; color: var(--plative-navy); border-color: #fff; }
+
+/* Ghost — text-only link styled as a button */
+.btn-ghost {
+  background: transparent;
+  color: var(--plative-crimson);
+  padding: 14px 0;
+}
+.btn-ghost:hover { color: var(--accent-hover); }
+
+/* Cards --------------------------------------------------------------*/
+.card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  padding: var(--s-6);
+  box-shadow: var(--shadow-sm);
+}
+.card-elevated { box-shadow: var(--shadow-md); border-color: transparent; }
+
+/* Eyebrow rule (a small horizontal accent bar above section titles) */
+.rule-accent {
+  display: block;
+  width: 48px;
+  height: 3px;
+  background: var(--plative-crimson);
+  border: none;
+  margin: 0 0 var(--s-4);
+}

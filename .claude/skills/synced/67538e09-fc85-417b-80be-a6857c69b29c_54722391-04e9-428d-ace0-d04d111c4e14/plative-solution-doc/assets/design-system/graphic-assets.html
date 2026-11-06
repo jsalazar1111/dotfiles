@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Plative — Graphic Assets</title>
+<link rel="stylesheet" href="tokens.css" />
+<style>
+  html, body { margin: 0; background: #fff; color: var(--text-primary); }
+  body { font-family: var(--font-sans); padding: 56px 64px; box-sizing: border-box; width: 1280px; }
+  .head { display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 24px; }
+  .head .meta { color: var(--text-muted); font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 600; }
+  .lede { font-size: 16px; line-height: 1.55; color: var(--plative-graphite); max-width: 720px; margin: 0 0 32px; }
+  .group-title { display: flex; align-items: center; gap: 16px; margin: 22px 0 14px; }
+  .group-title h2 { font-size: 13px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--plative-graphite); margin: 0; }
+  .group-title .line { flex: 1; height: 1px; background: var(--border); }
+
+  .grid { display: grid; gap: 16px; }
+  .row-3 { grid-template-columns: repeat(3, 1fr); }
+  .row-5 { grid-template-columns: repeat(5, 1fr); }
+
+  .tile { border: 1px solid var(--border); border-radius: 10px; overflow: hidden; background: #fff; }
+  .tile .img { aspect-ratio: 16/9; background-size: cover; background-position: center; }
+  .tile .cap { padding: 12px 14px; display: flex; align-items: baseline; justify-content: space-between; border-top: 1px solid var(--border); }
+  .tile .cap b { font-size: 13px; font-weight: 600; }
+  .tile .cap span { font-size: 10.5px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--plative-slate); font-weight: 600; }
+</style>
+</head>
+<body>
+
+<div class="head">
+  <div>
+    <div class="t-eyebrow">Plative · Graphic Assets</div>
+    <h1 class="t-display" style="margin:6px 0 0;">Plative meets you,<br/>wherever you are.</h1>
+  </div>
+  <div class="meta">Brand Guidelines · 02.2026</div>
+</div>
+
+<p class="lede">
+  Our graphic system is grounded in low-poly landscapes — mountain, prairie, forest and city — paired with a soft aurora gradient. Use full-bleed scenes for titles and transitions; use bordered crops or gradient washes when copy density is higher.
+</p>
+
+<div class="group-title"><h2>Landscapes — full bleed</h2><div class="line"></div></div>
+<div class="grid row-3">
+  <div class="tile"><div class="img" style="background-image:url('assets/graphics/mountains-1-full.jpg');"></div><div class="cap"><b>Mountains 1</b><span>Title · Transition</span></div></div>
+  <div class="tile"><div class="img" style="background-image:url('assets/graphics/forest.jpg');"></div><div class="cap"><b>Forest</b><span>Title · Callout</span></div></div>
+  <div class="tile"><div class="img" style="background-image:url('assets/graphics/prairie-full.jpg');"></div><div class="cap"><b>Prairie</b><span>Title · Transition</span></div></div>
+</div>
+
+<div class="group-title"><h2>Landscapes — border crop</h2><div class="line"></div></div>
+<div class="grid row-3">
+  <div class="tile"><div class="img" style="background-image:url('assets/graphics/mountains-2.jpg');"></div><div class="cap"><b>Mountain Border</b><span>Bullets · Mid copy</span></div></div>
+  <div class="tile"><div class="img" style="background-image:url('assets/graphics/forest-border.jpg');"></div><div class="cap"><b>Forest Border</b><span>Bullets · Mid copy</span></div></div>
+  <div class="tile"><div class="img" style="background-image:url('assets/graphics/city-border.jpg');"></div><div class="cap"><b>City Border</b><span>Bullets · Mid copy</span></div></div>
+</div>
+
+<div class="group-title"><h2>Gradients</h2><div class="line"></div></div>
+<div class="grid row-5">
+  <div class="tile"><div class="img" style="background-image:url('assets/graphics/gradient-1-aurora.jpg');"></div><div class="cap"><b>Gradient 1</b><span>Aurora</span></div></div>
+  <div class="tile"><div class="img" style="background-image:url('assets/graphics/gradient-2.jpg');"></div><div class="cap"><b>Gradient 2</b><span>Aurora · Soft</span></div></div>
+  <div class="tile"><div class="img" style="background-image:url('assets/graphics/gradient-3.jpg');"></div><div class="cap"><b>Gradient 3</b><span>Charts</span></div></div>
+  <div class="tile"><div class="img" style="background-image:url('assets/graphics/gradient-4-navy.jpg');"></div><div class="cap"><b>Gradient 4</b><span>Navy wash</span></div></div>
+  <div class="tile"><div class="img" style="background-image:url('assets/graphics/gradient-5-light.jpg');"></div><div class="cap"><b>Gradient 5</b><span>Light wash</span></div></div>
+</div>
+
+</body>
+</html>

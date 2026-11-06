@@ -1,0 +1,50 @@
+{
+  "title": "Expense Approval Process",
+  "process_area": "Finance",
+  "direction": "horizontal",
+  "steps": [
+    {
+      "id": "submit",
+      "stepNumber": "1",
+      "name": "Submit Expense",
+      "responsible": "Employee",
+      "accountable": "Manager",
+      "system": "Concur",
+      "row": 0, "col": 0
+    },
+    {
+      "id": "review",
+      "stepNumber": "2",
+      "name": "Review Expense",
+      "responsible": "Manager",
+      "accountable": "Finance Lead",
+      "system": "Concur",
+      "row": 0, "col": 1
+    },
+    {
+      "id": "reimburse",
+      "stepNumber": "3",
+      "name": "Reimburse Employee",
+      "responsible": "AP Specialist",
+      "accountable": "Controller",
+      "system": "NetSuite",
+      "row": 0, "col": 2
+    },
+    {
+      "id": "revise",
+      "stepNumber": "2.1",
+      "name": "Revise Expense",
+      "responsible": "Employee",
+      "accountable": "Manager",
+      "system": "Concur",
+      "row": 1, "col": 1
+    }
+  ],
+  "connections": [
+    { "from": "review", "to": "reimburse", "label": "Approved", "fromPosition": {"x": 1, "y": 0.5}, "toPosition": {"x": 0, "y": 0.5} },
+    { "from": "review", "to": "revise", "label": "Rejected", "fromPosition": {"x": 0.5, "y": 1}, "toPosition": {"x": 0.5, "y": 0} },
+    { "from": "revise", "to": "review", "label": "Resubmit", "fromPosition": {"x": 0, "y": 0.5}, "toPosition": {"x": 0.5, "y": 1} }
+  ],
+  "startNode": { "row": 0, "col": -1 },
+  "endNode": { "row": 0, "col": 3 }
+}

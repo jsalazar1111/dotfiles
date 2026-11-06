@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Plative — Slide Layouts</title>
+<link rel="stylesheet" href="tokens.css" />
+<style>
+  html, body { margin: 0; background: #F5F6F8; color: var(--text-primary); }
+  body { font-family: var(--font-sans); padding: 56px 64px; box-sizing: border-box; width: 1280px; }
+  .head { display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 28px; }
+  .head .meta { color: var(--text-muted); font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 600; }
+  .group-title { display: flex; align-items: center; gap: 16px; margin: 22px 0 14px; }
+  .group-title h2 { font-size: 13px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--plative-graphite); margin: 0; }
+  .group-title .line { flex: 1; height: 1px; background: var(--border-strong); }
+  .note { font-size: 13px; color: var(--plative-graphite); margin: 0 0 22px; max-width: 720px; line-height: 1.55; }
+
+  .deck { display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px; }
+
+  /* Slide canvas — 16:9 */
+  .slide {
+    position: relative;
+    aspect-ratio: 16/9;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 4px 16px rgba(38,42,66,0.08);
+  }
+  .slide .pad { position: absolute; inset: 0; padding: 38px 44px; display: flex; flex-direction: column; z-index: 2; }
+  .slide .logo { position: absolute; top: 22px; right: 26px; height: 16px; z-index: 3; }
+  /* Page numbers — high contrast on every surface */
+  .slide .pageno { position: absolute; bottom: 18px; right: 26px; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--plative-graphite); font-weight: 700; z-index: 3; font-variant-numeric: tabular-nums; }
+  .slide.dark .pageno { color: #fff; opacity: 0.85; }
+
+  .slide .eyebrow { font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--plative-crimson); font-weight: 700; }
+  .slide .rule { width: 36px; height: 3px; background: var(--plative-crimson); margin: 8px 0 14px; }
+  .slide .title { font-weight: 600; line-height: 1.05; letter-spacing: -0.02em; }
+
+  /* Universal scrim helper for image-backed slides */
+  .scrim::before {
+    content: ""; position: absolute; inset: 0; z-index: 1;
+    pointer-events: none;
+  }
+
+  /* 1. Cover — aurora + dark scrim ----------------------------------- */
+  .s-cover { background-image: url('assets/graphics/gradient-1-aurora.jpg'); background-size: cover; background-position: center; color: #fff; }
+  /* Strong diagonal scrim: deep navy at the copy side, transparent on the bright side */
+  .s-cover.scrim::before {
+    background:
+      linear-gradient(95deg, rgba(20,24,46,0.78) 0%, rgba(20,24,46,0.62) 38%, rgba(20,24,46,0.18) 70%, rgba(20,24,46,0) 100%),
+      linear-gradient(180deg, rgba(20,24,46,0) 60%, rgba(20,24,46,0.45) 100%);
+  }
+  .s-cover .title { font-size: 44px; max-width: 78%; color: #fff; text-shadow: 0 1px 12px rgba(0,0,0,0.25); }
+  .s-cover .sub { font-weight: 400; font-size: 16px; line-height: 1.45; color: #fff; opacity: 0.96; margin-top: 12px; max-width: 60%; text-shadow: 0 1px 8px rgba(0,0,0,0.25); }
+  .s-cover .stamp { margin-top: auto; font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: #fff; opacity: 0.92; font-weight: 700; }
+  .s-cover .eyebrow { color: #ffd1cd; }   /* lighter crimson tint readable on dark scrim */
+  .s-cover .pageno { color: #fff; opacity: 0.92; }
+
+  /* 2. Section divider — mountain full + bottom scrim ---------------- */
+  .s-section { background-image: url('assets/graphics/mountains-1-full.jpg'); background-size: cover; background-position: center; color: #fff; }
+  .s-section.scrim::before {
+    background: linear-gradient(180deg, rgba(20,24,46,0) 30%, rgba(20,24,46,0.55) 65%, rgba(20,24,46,0.85) 100%);
+  }
+  .s-section .pad { justify-content: flex-end; }
+  .s-section .num { font-weight: 600; font-size: 60px; line-height: 1; color: #fff; opacity: 0.9; letter-spacing: -0.02em; }
+  .s-section .title { font-size: 36px; margin-top: 6px; color: #fff; }
+  .s-section .pageno { color: #fff; opacity: 0.9; }
+
+  /* 3. Content — bordered (mountain crop) ---------------------------- */
+  .s-content { background: #fff; }
+  .s-content::before { content:""; position:absolute; inset:auto 0 0 0; height: 38%; background: url('assets/graphics/mountains-2.jpg') center bottom/cover no-repeat; z-index: 0; }
+  .s-content .title { font-size: 26px; max-width: 90%; color: var(--plative-navy); }
+  .s-content .body { font-size: 13px; line-height: 1.55; color: #262A42; opacity: 0.78; margin-top: 10px; max-width: 88%; }
+  .s-content ul { margin: 0; padding-left: 18px; font-size: 12.5px; line-height: 1.7; color: var(--plative-ink); }
+  .s-content ul li::marker { color: var(--plative-crimson); }
+  .s-content .pageno { color: var(--plative-graphite); }
+
+  /* 4. Two-up stat — solid navy (no gradient washout) ---------------- */
+  .s-stat { background: var(--plative-navy); color: #fff; }
+  /* subtle radial highlight to give it depth without crushing text contrast */
+  .s-stat::before {
+    content:""; position:absolute; inset:0; z-index:0;
+    background: radial-gradient(120% 90% at 100% 0%, rgba(225,65,54,0.18) 0%, rgba(225,65,54,0) 55%),
+                radial-gradient(80% 60% at 0% 100%, rgba(66,85,130,0.45) 0%, rgba(66,85,130,0) 60%);
+  }
+  .s-stat .pad { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
+  .s-stat .left { display: flex; flex-direction: column; }
+  .s-stat .left .title { font-size: 22px; max-width: 90%; color: #fff; }
+  .s-stat .left .body { font-size: 12px; color: #fff; opacity: 0.92; line-height: 1.5; margin-top: 10px; }
+  .s-stat .right { display: flex; flex-direction: column; justify-content: center; align-items: flex-start; gap: 6px; padding-left: 24px; border-left: 1px solid rgba(255,255,255,0.28); }
+  .s-stat .figure { font-weight: 600; font-size: 80px; line-height: 0.95; letter-spacing: -0.03em; color: #fff; }
+  .s-stat .figure span { color: #ff7a72; }   /* lighter crimson — passes contrast on navy */
+  .s-stat .figcap { font-size: 12px; line-height: 1.4; color: #fff; opacity: 0.92; max-width: 80%; font-weight: 500; }
+  .s-stat .eyebrow { color: #ff7a72; }
+
+  /* 5. Quote — light gradient (deepened text) ------------------------ */
+  .s-quote { background-image: url('assets/graphics/gradient-5-light.jpg'); background-size: cover; }
+  .s-quote .pad { justify-content: center; }
+  .s-quote q { font-weight: 400; font-size: 28px; line-height: 1.25; color: var(--plative-navy); display: block; quotes: "“" "”"; max-width: 90%; }
+  .s-quote q::before { content: open-quote; color: var(--plative-crimson); }
+  .s-quote q::after  { content: close-quote; color: var(--plative-crimson); }
+  .s-quote .by { margin-top: 18px; font-size: 12px; color: var(--plative-ink); }
+  .s-quote .by b { color: var(--plative-navy); font-weight: 700; }
+  .s-quote .pageno { color: var(--plative-graphite); }
+
+  /* 6. Closing — navy solid (deeper, brighter copy) ------------------ */
+  .s-close { background: var(--plative-navy); color: #fff; }
+  .s-close::before {
+    content:""; position:absolute; inset:0; z-index:0;
+    background: radial-gradient(70% 60% at 50% 110%, rgba(225,65,54,0.22) 0%, rgba(225,65,54,0) 60%);
+  }
+  .s-close .pad { justify-content: center; align-items: center; text-align: center; }
+  .s-close .title { font-size: 38px; color: #fff; }
+  .s-close .sub { font-weight: 400; font-size: 14px; color: #fff; opacity: 0.92; margin-top: 10px; }
+  .s-close .cta { margin-top: 22px; padding: 12px 26px; color:#fff; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 700; border-radius: 4px; background: var(--plative-crimson); border: 1px solid var(--plative-crimson); }
+  .s-close .eyebrow { color: #ff7a72; }
+  .s-close .pageno { color: #fff; opacity: 0.85; }
+
+  /* Caption strip below each slide */
+  .slide-wrap .meta { display: flex; align-items: baseline; justify-content: space-between; padding: 12px 4px 0; }
+  .slide-wrap .meta b { font-size: 13px; font-weight: 600; color: var(--plative-ink); }
+  .slide-wrap .meta span { font-size: 10.5px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--plative-slate); font-weight: 600; }
+
+  /* Contrast badge — small AA / AAA tag in caption */
+  .meta .aa { display: inline-flex; align-items: center; gap: 6px; padding: 3px 8px; border-radius: 999px; background: var(--plative-paper); border: 1px solid var(--border); color: var(--plative-graphite); font-weight: 700; }
+  .meta .aa::before { content:""; width:6px; height:6px; border-radius:50%; background: #2BA84A; }
+</style>
+</head>
+<body>
+
+<div class="head">
+  <div>
+    <div class="t-eyebrow">Plative · Slide System</div>
+    <h1 class="t-display" style="margin:6px 0 0;">Slide layouts</h1>
+  </div>
+  <div class="meta">Brand Guidelines · 02.2026</div>
+</div>
+
+<p class="note">
+  Every layout is tuned for legibility. Image backgrounds carry a navy scrim; on solid-navy slides we step crimson up to a lighter tint (<b>#FF7A72</b>) so it stays readable as type. Body copy never sits below 92% white on dark surfaces.
+</p>
+
+<div class="group-title"><h2>Six core layouts</h2><div class="line"></div></div>
+<div class="deck">
+
+  <div class="slide-wrap">
+    <div class="slide s-cover scrim dark">
+      <img class="logo" src="assets/logos/plative-logo-white.png" alt="" />
+      <div class="pad">
+        <div class="eyebrow">Plative · 2026</div>
+        <div class="rule"></div>
+        <div class="title">Plative meets you, wherever you are.</div>
+        <div class="sub">Brand guidelines for the year ahead — visual identity, typography, color and graphic system.</div>
+        <div class="stamp">February 2026 · Internal</div>
+      </div>
+      <div class="pageno">01</div>
+    </div>
+    <div class="meta"><b>Cover</b><span>Aurora + scrim · <span class="aa">AA</span></span></div>
+  </div>
+
+  <div class="slide-wrap">
+    <div class="slide s-section scrim dark">
+      <img class="logo" src="assets/logos/plative-logo-white.png" alt="" />
+      <div class="pad">
+        <div class="num">02</div>
+        <div class="title">Logo Usage</div>
+      </div>
+      <div class="pageno">Section</div>
+    </div>
+    <div class="meta"><b>Section divider</b><span>Mountain + bottom scrim · <span class="aa">AA</span></span></div>
+  </div>
+
+  <div class="slide-wrap">
+    <div class="slide s-content">
+      <img class="logo" src="assets/logos/plative-logo-black.png" alt="" />
+      <div class="pad">
+        <div class="eyebrow">Approach</div>
+        <div class="rule"></div>
+        <div class="title">A modern visual identity, grounded in landscape.</div>
+        <div class="body">Our graphic system uses low-poly scenery and an aurora gradient to evoke calm, range and possibility — wherever the work takes us.</div>
+        <ul style="margin-top:12px;">
+          <li>One primary color, one primary face</li>
+          <li>Crimson as accent, never as flood</li>
+          <li>Generous clear space, large type</li>
+        </ul>
+      </div>
+      <div class="pageno">03</div>
+    </div>
+    <div class="meta"><b>Content + bordered art</b><span>White surface · <span class="aa">AAA</span></span></div>
+  </div>
+
+  <div class="slide-wrap">
+    <div class="slide s-stat dark">
+      <img class="logo" src="assets/logos/plative-logo-white.png" alt="" />
+      <div class="pad">
+        <div class="left">
+          <div class="eyebrow">Q3 Results</div>
+          <div class="rule"></div>
+          <div class="title">Crimson is reserved for our biggest moments.</div>
+          <div class="body">Use it to highlight the single most important figure on the slide — never decoratively, never as background.</div>
+        </div>
+        <div class="right">
+          <div class="figure"><span>74</span>%</div>
+          <div class="figcap">YoY growth in qualified pipeline</div>
+        </div>
+      </div>
+      <div class="pageno">04</div>
+    </div>
+    <div class="meta"><b>Two-up stat</b><span>Solid navy + tinted crimson · <span class="aa">AA</span></span></div>
+  </div>
+
+  <div class="slide-wrap">
+    <div class="slide s-quote">
+      <img class="logo" src="assets/logos/plative-logo-black.png" alt="" />
+      <div class="pad">
+        <q>The best brand systems aren't memorized — they're internalized. Reach for the closest layout, then trust the rules to do the rest.</q>
+        <div class="by"><b>Brand Team</b> · Plative · February 2026</div>
+      </div>
+      <div class="pageno">05</div>
+    </div>
+    <div class="meta"><b>Quote</b><span>Light wash · <span class="aa">AAA</span></span></div>
+  </div>
+
+  <div class="slide-wrap">
+    <div class="slide s-close dark">
+      <img class="logo" src="assets/logos/plative-logo-white.png" alt="" />
+      <div class="pad">
+        <div class="eyebrow">Thank you</div>
+        <div class="rule"></div>
+        <div class="title">Questions? brand@plative.com</div>
+        <div class="sub">Find templates, logos and graphic assets in the brand drive.</div>
+        <div class="cta">Open the brand drive</div>
+      </div>
+      <div class="pageno">06</div>
+    </div>
+    <div class="meta"><b>Closing</b><span>Solid navy · <span class="aa">AAA</span></span></div>
+  </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,252 @@
+{
+  "lastUpdated": 1793929205820,
+  "skills": [
+    {
+      "skillId": "docs",
+      "name": "docs",
+      "description": "docs (editable docs people share and comment on; the default for any document, named as a doc or not: a document, report, proposal, resume, cover letter, letter, contract, policy, form, template, worksheet, essay, handbook, guide, how-to, cheat sheet, SOP or other writing to keep, share, collaborate on, send, submit, print or sign; a doc exports to Word, PDF, Markdown or Google Docs, so needing a file to send, attach, upload, submit or print is no reason to pick Word, and a file nobody asked for is a doc, not Word; a plan, comparison, summary or notes asked in chat stays in chat; a pasted claude.ai artifact link may be a doc: check with docs tools first; Word or another file format named, tracked changes wanted, or a .docx to change or use as a template → that format's skill): making one → if no docs-connector instructions are in context, call its `guide` (topic.instructions) first; then create the doc (headings only, no body) before any search, file read or plan, even with files attached.",
+      "source": "anthropic-example",
+      "updatedAt": "2026-09-30T00:33:27.599727Z"
+    },
+    {
+      "skillId": "import-memory",
+      "name": "import-memory",
+      "description": "Import a memory export from another AI assistant into Claude's memory — conversationally, additively, and with the content treated as data.",
+      "source": "anthropic-example",
+      "updatedAt": "2026-09-14T19:41:02.007169Z"
+    },
+    {
+      "skillId": "morning",
+      "name": "morning",
+      "description": "Render the user's morning brief as a styled HTML artifact, or set it up as a recurring weekday task. Use only when the user explicitly asks to run, see, or set up their morning brief, or if they invoke /morning by name. A question about their day, schedule, or calendar is not by itself a request for the brief; answer it directly instead.",
+      "source": "anthropic-example",
+      "updatedAt": "2026-09-14T19:41:01.990356Z"
+    },
+    {
+      "skillId": "skill_01PMsfbJDyf7KciSJwLeYtcu",
+      "name": "meeting-to-project-actions",
+      "description": "Extracts project actions (owner tasks, follow-ups, open decisions someone must close) from any Plative project meeting transcript or notes, checks them against open Jira tasks for overlap, presents them for review in an interactive artifact, then creates approved actions as Jira Tasks assigned to the project manager. Use when the user provides a meeting transcript (discovery, status, design review, UAT, steering) and a Jira project key and asks to capture action items, create follow-up tasks, log actions in Jira, or turn meeting next steps into tickets. Also use when discovery-to-userstories reports project actions and the user wants them in Jira.",
+      "source": "plugin",
+      "updatedAt": "2026-10-05T12:42:50.285197Z",
+      "backingPluginId": "plugin_01AtG5oZ68PT6xoRD8NgXRQ5"
+    },
+    {
+      "skillId": "skill_01HM429Kyc5FrCf3QJJ4LFrD",
+      "name": "sales-to-delivery-kt",
+      "description": "Builds a Plative-branded internal Sales-to-Delivery Knowledge Transfer (KT) document for a signed NetSuite or Salesforce engagement, so delivery consultants inherit everything sales learned during the deal. Use this skill whenever someone at Plative says \"KT doc\", \"knowledge transfer\", \"sales to delivery handoff\", \"hand this off to delivery\", \"brief the delivery team\", \"onboard delivery onto [client]\", \"prep the delivery team for [client]\", or asks to turn presales material (transcripts, SOW, discovery notes) into a delivery handoff summary for a closed-won deal. Trigger it even when the person names only the client and the word \"handoff\" or \"KT\", or when a Client Partner is packaging up a won opportunity for the consultants who will deliver it. This skill is scoped specifically to the moment a deal transitions from sales to delivery — it pulls the Salesforce Opportunity, reads the presales transcripts, researches the client, and produces [ClientName]_Knowledge_Transfer.docx.",
+      "source": "plugin",
+      "updatedAt": "2026-09-08T13:10:27.064896Z",
+      "backingPluginId": "plugin_01HfhPixfymTqNDgFDcnnkvD"
+    },
+    {
+      "skillId": "google-workspace",
+      "name": "google-workspace",
+      "description": "Read this before the first Google Drive, Docs, Sheets or Slides connector call whenever the task creates or changes a Google file. Use this skill whenever the user wants to create or change a Google Doc, Sheet or Slides file in their Google Drive. Triggers include: a request that names Google Docs, Sheets, Slides or Drive and asks to make, edit, format, copy or rename a file; a docs.google.com link with a request to change that file, even a one-line fix or suggested edits; and any follow-up change to a Google file from earlier in the chat, even \"change it\" or \"add a tab\". Includes helper scripts for document positions, cell ranges and slide layout. However, if the user asks for a doc, deck or spreadsheet without naming Google, or gives a Google file only as source material for something new, use Claude's own output type instead. Do NOT use for read-only questions about a Google file, or for Word, Excel, PowerPoint or PDF files.",
+      "source": "anthropic-example",
+      "updatedAt": "2026-10-14T14:41:49.960676Z"
+    },
+    {
+      "skillId": "skill_014zyxWusUtR2jiKHeQpKj1x",
+      "name": "overburn-pli-followup",
+      "description": "Monitor Joel's delivery portfolio (Director = Joel Salazar) for budget risk such as line items over 100% or overburn, then send each PM one budget risk report for their projects in Slack.",
+      "source": "plugin",
+      "updatedAt": "2026-10-23T17:11:58.114579Z",
+      "backingPluginId": "plugin_017Uj7qonNZi3WAhoCssYxUd"
+    },
+    {
+      "skillId": "skill_01Tmw9gLqq6H3GmtEwcAuhhw",
+      "name": "nonprofit-impact-report",
+      "description": "Generate board-ready, funder-worthy nonprofit program impact reports by querying Salesforce Nonprofit Cloud data. Use this skill whenever a user asks to generate an impact report, program summary, funder report, grant report, or board report for a nonprofit program. Also triggers on requests to analyze program reach, participant outcomes, service delivery metrics, enrollment trends, or demographic breakdowns from Salesforce Nonprofit Cloud. Covers the full workflow: Salesforce data extraction via SOQL, data interpretation, narrative generation, multi-audience tailoring (board, donors, institutional funders), PDF attachment to Salesforce records, and social media kit generation. Always use this skill when the user mentions programs, enrollments, benefits, disbursements, or impact metrics in a Salesforce nonprofit context — even if they don't say 'impact report' explicitly.",
+      "source": "plugin",
+      "updatedAt": "2026-06-07T20:51:18.364279Z",
+      "backingPluginId": "plugin_015iKqfbfTDxMV4afQeVSZJt"
+    },
+    {
+      "skillId": "skill_01L6WkmvGp392SsM4n1mSDj1",
+      "name": "win-story",
+      "description": "Generates Plative NetSuite win story deliverables from proposal decks, SOWs, Spotlight sheets, or pasted notes. Five outputs: (A) email for NetSuite AEs, (B) Joint Win .pptx, (C) Spotlight Award submission, (D) internal Deal Review debrief, (F) enablement deck panel. Trigger for: \"win story\", \"customer win\", \"joint win\", \"spotlight award\", \"spotlight submission\", \"NSCorp submission\", closed/won deal summary requests, proposal decks marked as won or live. Also trigger for: \"deal review\", \"internal debrief\", \"debrief this deal\", \"how did this deal go\" — internal deal summaries. Also trigger for: \"enablement slide\", \"deal panel\", \"add to enablement deck\", \"vertical enablement\", \"populate the panel\" — injecting deal snapshots into vertical enablement decks. Use the plative-voice skill for all copy.",
+      "source": "plugin",
+      "updatedAt": "2026-09-08T13:09:48.781160Z",
+      "backingPluginId": "plugin_0189C28jRuPgrNz8rAumhFBQ"
+    },
+    {
+      "skillId": "pdf",
+      "name": "pdf",
+      "description": "Use this skill whenever the user wants to do anything with PDF files. This includes reading or extracting text/tables from PDFs, combining or merging multiple PDFs into one, splitting PDFs apart, rotating pages, adding watermarks, creating new PDFs, filling PDF forms, encrypting/decrypting PDFs, extracting images, and OCR on scanned PDFs to make them searchable. If the user mentions a .pdf file or asks to produce one, use this skill.",
+      "source": "anthropic",
+      "updatedAt": "2026-11-03T08:00:21.562085Z"
+    },
+    {
+      "skillId": "skill_01YAgAAyPEXs1N7vqQU2FPiG",
+      "name": "project-ramp",
+      "description": "Generates a structured markdown project summary from a Plative KT document and/or supplemental engagement materials, so a new delivery resource can get up to speed fast. Works at two stages: pre-kickoff (KT doc is the primary source) and mid-engagement (call recordings, Drive folder, status reports, UPNs, flow diagrams, Granola/Fellow transcripts). Trigger for: \"Project Ramp\", \"ramp for [client]\", \"prep for [client] kickoff\", \"load the KT for [client]\", \"new team member joining [client]\", \"get me up to speed on [client]\", \"onboard someone onto [client]\", or any .docx KT attachment alongside \"prep\", \"review\", \"kickoff\", \"ramp\", or \"onboard\". Also trigger when someone shares a Drive project folder link and asks for a project summary. Do NOT use to create a KT document — use sales-to-delivery-kt or kt-doc-builder for that.",
+      "source": "plugin",
+      "updatedAt": "2026-09-08T13:08:00.969259Z",
+      "backingPluginId": "plugin_019x9YvwrFe4V5Vcp1SLZWvF"
+    },
+    {
+      "skillId": "skill_01J3jYFrnxeizVVeXja5CJfp",
+      "name": "discovery-to-userstories",
+      "description": "Extracts user stories from a Salesforce discovery session transcript, checks them against the existing Jira backlog for overlap, presents them for consultant review in an interactive artifact with checkboxes, then pushes approved stories to Jira. Also flags project actions found in the transcript and hands them off instead of turning them into stories. Use when the user provides a discovery transcript and a Jira project key and asks to extract user stories, build a backlog, or create Jira tickets from the session.",
+      "source": "plugin",
+      "updatedAt": "2026-10-05T12:40:12.838073Z",
+      "backingPluginId": "plugin_014aqoBCYiFFjcSbWA2EP462"
+    },
+    {
+      "skillId": "skill_01HyLQMtXhk9mhRmBBMfeUGn",
+      "name": "account-expansion-plan",
+      "description": "Generates a Plative Account Expansion Plan (branded one-pager slide plus contact-map and sources appendix) for a named customer account, pulling Salesforce account and project data, Monid firmographic and tech-stack enrichment, web research on PE ownership, and contact interaction history from Gmail, Google Calendar, Fellow, and Granola. Use this skill whenever a Plative sales rep or client partner asks to \"build an account expansion plan,\" \"create an account plan,\" \"put together a plan for [customer],\" or names a customer alongside \"expansion,\" \"account plan,\" \"cross-sell,\" \"AI play,\" or \"who are we talking to at [customer].\" The only input required from the rep is the account name; everything else is researched. Always use this skill before building an account plan from scratch, and always cite sources in the output.",
+      "source": "plugin",
+      "updatedAt": "2026-07-17T13:16:59.139620Z",
+      "backingPluginId": "plugin_01DbGGMbuHK7wVc6SVU9ccqc"
+    },
+    {
+      "skillId": "skill-creator",
+      "name": "skill-creator",
+      "description": "Create new skills, modify and improve existing skills, and measure skill performance. Use when users want to create a skill from scratch, edit, or optimize an existing skill, run evals to test a skill, benchmark skill performance with variance analysis, or optimize a skill's description for better triggering accuracy.",
+      "source": "anthropic-example",
+      "updatedAt": "2026-10-28T17:00:24.127636Z"
+    },
+    {
+      "skillId": "skill_01V42ABEVevNQEW8q5UDDSqn",
+      "name": "discovery-game-plan",
+      "description": "Generates a Plative discovery game plan as a Google Sheet from a project SOW (or Change Order), MANTRA document, and KT (Knowledge Transfer) document or pre-sales call transcripts. Includes an interactive consultant review step before output is created. Use whenever a Salesforce project is entering the discovery phase and the team needs to plan and schedule discovery sessions. Trigger when the user says anything like \"create a discovery game plan\", \"build the discovery schedule\", \"set up discovery sessions\", \"plan discovery from the SOW\", \"generate discovery agenda\", or \"put together the discovery plan\". Also trigger when the user provides or references a SOW plus pre-sales materials and asks what sessions to run or how to structure discovery. Always use this skill before building any discovery planning spreadsheet — never attempt to create one from scratch without it.",
+      "source": "plugin",
+      "updatedAt": "2026-07-09T14:16:01.653508Z",
+      "backingPluginId": "plugin_01KYkdM71UbephdacTY2Qyoy"
+    },
+    {
+      "skillId": "skill_01Si8msMQ5qEzGPUQqnYqjKX",
+      "name": "impeccable",
+      "description": "Use when the user wants to design, redesign, shape, critique, audit, polish, clarify, distill, harden, optimize, adapt, animate, colorize, extract, or otherwise improve a frontend interface. Covers websites, landing pages, dashboards, product UI, app shells, components, forms, settings, onboarding, and empty states. Handles UX review, visual hierarchy, information architecture, cognitive load, accessibility, performance, responsive behavior, theming, anti-patterns, typography, fonts, spacing, layout, alignment, color, motion, micro-interactions, UX copy, error states, edge cases, i18n, and reusable design systems or tokens. Also use for bland designs that need to become bolder or more delightful, loud designs that should become quieter, live browser iteration on UI elements, or ambitious visual effects that should feel technically extraordinary. Not for backend-only or non-UI tasks.",
+      "source": "plugin",
+      "updatedAt": "2026-06-22T19:19:51.459439Z",
+      "backingPluginId": "plugin_01NSEhpZ5dckpjGBdLmctXWn"
+    },
+    {
+      "skillId": "skill_012i6dfPWYtzqHi9WxQ9WYKm",
+      "name": "discovery-session-deck",
+      "description": "Generates slide-by-slide content for a Plative Salesforce (or NetSuite) discovery  session presentation, walks the user through an interactive accept / update / reject  review of each slide, then produces final structured markdown ready to paste into  Claude Design to create the finished deck. Use this skill whenever someone needs to  build, plan, draft, or prepare a discovery session deck. Trigger on phrases like  \"build my discovery deck\", \"create session slides\", \"prep slides for my session with  [customer]\", \"I have a discovery session with [customer] and need a deck\", \"write up  the discovery presentation\", or any request involving discovery session slides or  presentations. Also trigger when the user mentions a customer name alongside  \"discovery\", \"session\", or \"slides\" — even without the word \"skill\" or an explicit  request. Always use this skill before building any discovery presentation from scratch.",
+      "source": "plugin",
+      "updatedAt": "2026-07-09T14:15:54.960307Z",
+      "backingPluginId": "plugin_013bnpzdieZDeda9Y1BYZhPd"
+    },
+    {
+      "skillId": "skill_01LxSJLnheKGw1jmbRQMPmWk",
+      "name": "plative-salesforce-positioning",
+      "description": "Plative's Salesforce-specific positioning knowledge base for generating battlecards, AE leave-behinds, co-sell one-pagers, objection-handling guides, and \"why Plative\" narratives. Use whenever anyone asks for Salesforce positioning content, vertical pitch materials, a battlecard for a specific industry, AE enablement content, or a \"why loop in Plative\" story. Covers all Salesforce verticals Plative operates in: financial services (wealth management, private credit), PE-backed companies, nonprofit, technology/SaaS, and real estate. Always apply the plative-voice skill alongside this one for any written output.",
+      "source": "plugin",
+      "updatedAt": "2026-05-05T13:48:54.814116Z",
+      "backingPluginId": "plugin_01JmcH6YNLEJSD8L44ztReqv"
+    },
+    {
+      "skillId": "skill_01FszrZgHRfhDrGieyptRF17",
+      "name": "plative-netsuite-positioning",
+      "description": "Plative's NetSuite-specific positioning knowledge base for generating battlecards, AE leave-behinds, co-sell one-pagers, objection-handling guides, and \"why Plative\" narratives for Oracle NetSuite employees. Use whenever anyone asks for NetSuite positioning content, vertical pitch materials, a battlecard for a specific industry, AE enablement content, or a \"why loop in Plative\" story. Covers all NetSuite verticals Plative operates in: PE-backed portfolio companies, technology/SaaS, professional services, and nonprofit. Always apply the plative-voice skill alongside this one for any written output.",
+      "source": "plugin",
+      "updatedAt": "2026-05-05T13:55:26.381112Z",
+      "backingPluginId": "plugin_01A4SG1wiF1iHNbVRCKGuotA"
+    },
+    {
+      "skillId": "skill_01Ai4r68kcBvKPYZ8XvLVkHk",
+      "name": "plative-brand",
+      "description": "Plative brand guidelines for all designed outputs. Apply these guidelines whenever creating presentations (.pptx), documents (.docx), PDFs, HTML artifacts, React artifacts, slides, decks, reports, one-pagers, proposals, or any other deliverable with visual design for Plative. Trigger this skill whenever the output involves colors, fonts, layouts, or visual styling, even if the user does not explicitly mention 'brand' or 'Plative'. If the user asks to create any professional document, presentation, or visual asset, use this skill to ensure brand consistency. Also trigger when the user mentions 'on-brand', 'brand guidelines', 'our colors', 'our fonts', or 'Plative style'.",
+      "source": "plugin",
+      "updatedAt": "2026-03-13T14:03:00.596035Z",
+      "backingPluginId": "plugin_01LD41vT1oAyPMGoauN5Y7Eu"
+    },
+    {
+      "skillId": "skill_01XjAWRhm7MtjNrMzq89QMNN",
+      "name": "plative-voice",
+      "description": "Plative's brand voice and writing standards for any text Claude produces. Apply this skill whenever the user asks Claude to write, draft, edit, polish, ghostwrite, rewrite, or revise prose of any kind. This includes emails, slide copy, LinkedIn posts, tweets, blog posts, SOWs, proposals, decks, internal Slack messages, taglines, headlines, one-pagers, web copy, customer briefings, executive updates, status reports, follow-ups, and any other written deliverable. The skill enforces Plative's brand voice guidelines (active voice, plain English, no jargon, customer not client) and strips out the dead giveaways that mark text as AI-generated (em-dashes, antithetical parallelisms, \"delve,\" \"leverage,\" \"navigate the complexities of,\" and similar tells). Trigger this skill even when the user does not explicitly mention \"Plative voice,\" \"brand,\" or \"AI tells.\" If the request involves producing prose for a human reader, this skill applies.",
+      "source": "plugin",
+      "updatedAt": "2026-04-27T13:06:42.962482Z",
+      "backingPluginId": "plugin_01GvuqK3N1ZE5wcRsbzZrzjP"
+    },
+    {
+      "skillId": "xlsx",
+      "name": "xlsx",
+      "description": "Use this skill any time a spreadsheet file is the primary input or output. This means any task where the user wants to: open, read, edit, or fix an existing .xlsx, .xlsm, .xltx, .csv, or .tsv file (e.g., adding columns, computing formulas, formatting, charting, cleaning messy data); create a new spreadsheet from scratch or from other data sources; or convert between tabular file formats. Trigger especially when the user references a spreadsheet file by name or path — even casually (like \"the xlsx in my downloads\") — and wants something done to it or produced from it. Also trigger for cleaning or restructuring messy tabular data files (malformed rows, misplaced headers, junk data) into proper spreadsheets. The deliverable must be a spreadsheet file. Do NOT trigger when the primary deliverable is a Word document, HTML report, standalone Python script, database pipeline, or Google Sheets API integration, even if tabular data is involved.",
+      "source": "anthropic",
+      "updatedAt": "2026-11-05T23:00:20.704642Z"
+    },
+    {
+      "skillId": "pptx",
+      "name": "pptx",
+      "description": "Use this skill any time a .pptx or .potx file is involved in any way — as input, output, or both. This includes: creating slide decks, pitch decks, or presentations as PowerPoint (.pptx) files; reading, parsing, or extracting text from any .pptx or .potx file (even if the extracted content will be used elsewhere, like in an email, summary, or creating a different type of slide deck); editing, modifying, or updating existing presentations; combining or splitting slide files; working with templates (.potx), layouts, speaker notes, or comments. Trigger whenever the user asks for a PowerPoint or .pptx file, or references a .pptx or .potx filename, regardless of what they plan to do with the content afterward. However, when the user asks for a deck, slides, a slide deck, or a presentation without naming a file format, default to using a dedicated slide-deck artifact type or a separate slides skill if this session offers one; otherwise, use this skill.",
+      "source": "anthropic",
+      "updatedAt": "2026-11-05T23:00:20.704642Z"
+    },
+    {
+      "skillId": "docx",
+      "name": "docx",
+      "description": "Use this skill whenever the user wants to create, read, edit, or manipulate Word documents (.docx) or Word templates (.dotx). Triggers include: any mention of Microsoft Word Documents, such as 'Word doc', 'word document', '.docx', '.dotx', 'microsoft doc'. Also use when extracting or reorganizing content from .docx or .dotx files, inserting or replacing images in documents, find-and-replace in Word files, working with tracked changes or comments, or converting content into a polished Word document. If the user asks for a deliverable as a Word or .docx file (to download, email or print), use this skill. However, if they ask for a document, page, report, memo, or notes WITHOUT naming a file format and the session offers Claude's own dedicated document or page skill or connector, use that instead, even if they will email or print it. Do NOT use for PDFs, spreadsheets, Google Docs, or coding unrelated to document generation.",
+      "source": "anthropic",
+      "updatedAt": "2026-11-05T23:00:20.704642Z"
+    },
+    {
+      "skillId": "skill_011KXFSnRRZircdyLifeN7dJ",
+      "name": "slide-templates",
+      "description": "Plative-branded pptxgenjs slide layouts for generating presentations that match the official reference deck. Use this skill whenever the user asks to create a Plative presentation, slide deck, client deck, executive summary, proposal deck, discovery readout, findings slide, section divider, title slide, closing slide, or any slide that should follow Plative brand. Trigger this skill when the output is a .pptx file and the aesthetic should match the Plative reference slides (mountain/landscape hero backgrounds, navy + crimson brand colors, Open Sans typography, crimson-lantern logo). Also trigger when the user mentions 'Plative template', 'branded slides', 'our slide deck style', 'reference slides', or references a specific layout like 'agenda slide', 'three-column findings', 'section divider', or 'table slide'. Do not use for non-Plative presentations or when the user wants freeform slide design unrelated to the brand.",
+      "source": "plugin",
+      "updatedAt": "2026-04-24T14:18:49.542543Z",
+      "backingPluginId": "plugin_018ubZha6BqDVomcgDTSQg1r"
+    },
+    {
+      "skillId": "skill_01FVvThyNdMakq5ntKcqAr5U",
+      "name": "sow-to-proposal",
+      "description": "Generates a Plative-branded client proposal deck (.pptx) from an uploaded Statement of Work (SOW) document. Trigger this skill whenever a user mentions 'proposal', 'SOW to proposal', 'proposal deck', 'client proposal', 'generate proposal', 'build a proposal', 'create a proposal from SOW', 'proposal from statement of work', or any request that involves converting a SOW or scope document into a client-facing proposal presentation. Also trigger when the user says 'proposal template', 'fill out the proposal', or 'turn this SOW into a deck'. This skill handles the full pipeline: reading the SOW, researching the customer, gathering discovery context, and producing a complete branded Plative proposal deck.",
+      "source": "plugin",
+      "updatedAt": "2026-03-13T19:20:41.751280Z",
+      "backingPluginId": "plugin_01GpvjLVXkPpanF4GWhYErcC"
+    },
+    {
+      "skillId": "skill_01HTqR3mvw1bSy2q3eBu1k3k",
+      "name": "chiron-ai-delivery-coach",
+      "description": "Chiron, Plative's agentic delivery coach. Teaches consultants Claude Code for Salesforce and NetSuite delivery, then coaches real work. Use to start, continue or resume the journey.",
+      "source": "plugin",
+      "updatedAt": "2026-11-04T23:51:52.229202Z",
+      "backingPluginId": "plugin_015T7xVMs38STDZ9gPrijGWq"
+    },
+    {
+      "skillId": "skill_01XFFdtwy2kg7sRhyy8U3o8U",
+      "name": "discovery-questionnaire",
+      "description": "Generates a tailored, partially pre-populated pre-discovery questionnaire for a signed Plative NetSuite engagement, to be sent to the customer between the onboarding call and project kickoff. Scope is driven entirely by the executed SOW line items. Questions known from presales are pre-filled for client validation; gaps the client must answer are left blank. Trigger for: \"discovery questionnaire\", \"pre-discovery intake\", \"send the client a questionnaire\", \"build the questionnaire for [client]\", \"what do we still need to know before kickoff\", \"pre-kickoff client intake\", or any request to prepare a client-facing information-gathering document for a signed NetSuite engagement. Also trigger when the KT doc has just been generated and the next logical step is preparing the client questionnaire. Do NOT use for pre-sales qualification — use notes-to-loe for that. Do NOT use for internal delivery team prep — use project-ramp for that.",
+      "source": "plugin",
+      "updatedAt": "2026-09-25T15:08:07.362688Z",
+      "backingPluginId": "plugin_01GbTYqFfFA4y5Ja9MhLPq7R"
+    },
+    {
+      "skillId": "skill_01Df4hKXJhpVDNP8MPQSPUFp",
+      "name": "plative-upn-diagram",
+      "description": "Generate a Plative-branded UPN (Universal Process Notation) process diagram in Lucidchart — the exact activity-card style Plative uses, with RACI (R/A/C/I) roles, systems-of-record banners, branded start/end terminators, branching, and callouts. Use this skill WHENEVER the user wants to create, build, draw, map, or document a business process, workflow, process flow, process map, RACI diagram, swimlane-style flow, or \"how this works end to end\" in Lucid — even if they don't say \"UPN\" by name. Trigger on requests like \"map out our quote-to-cash process\", \"make a RACI diagram for onboarding\", \"diagram the approval workflow in Lucid\", or \"turn these steps into a Plative process diagram\". Do NOT use it for generic org charts, mind maps, architecture diagrams, or non-process visuals.",
+      "source": "plugin",
+      "updatedAt": "2026-09-23T19:07:28.694998Z",
+      "backingPluginId": "plugin_018wodXyfrAzjVfHBXnMqwaB"
+    },
+    {
+      "skillId": "skill_01BLEud9a1Y8L8yKDiZr1ZLj",
+      "name": "discovery-session-prep",
+      "description": "Prepares Plative NetSuite consultants for implementation-phase discovery sessions. Takes a customer website, presales notes, MANTRA doc, discovery intake form, call transcripts, and/or a signed SOW, infers likely NetSuite process areas in scope, confirms the list with the consultant, then produces a prep guide: the question bank per process area with likely answers pre-filled from source material (cited, confidence-flagged) and the rest flagged open. Can also generate a companion customer-facing onboarding questionnaire in plain language with Plative branding. Trigger for: 'prep for discovery', 'discovery session prep', 'prepare for the discovery call', 'get ready for kickoff', 'discovery questions for [customer]', 'build a discovery prep guide', 'implementation discovery questions', 'onboarding questionnaire', 'client questionnaire', 'send the customer a questionnaire'. Distinct from the pre-sales Discovery Intake Forms and from notes-to-loe.",
+      "source": "plugin",
+      "updatedAt": "2026-07-14T17:29:34.233041Z",
+      "backingPluginId": "plugin_01FS8is5bE1bVGgYZRyaFqfC"
+    },
+    {
+      "skillId": "skill_01WGhcMB3tHW2LEsrgwmQQ8e",
+      "name": "customer-onboarding-deck",
+      "description": "Generates a Plative customer onboarding slide deck (.pptx) by pulling meeting notes, transcripts, and the SOW from the customer's Google Drive folder and filling them into the standard onboarding template. Use this skill whenever someone asks to \"build an onboarding deck,\" \"create the onboarding presentation,\" \"put together onboarding slides for [customer],\" or mentions building/prepping an onboarding deck for a named customer. Also trigger when the user references \"onboarding meeting,\" \"kickoff prep,\" or asks to turn presales/SOW content into an onboarding deck. Always use this skill before building an onboarding deck from scratch — the only input required from the user is the customer name; everything else is researched from Drive.",
+      "source": "plugin",
+      "updatedAt": "2026-10-21T17:40:59.531380Z",
+      "backingPluginId": "plugin_01E5Etrp9EDsAhKYDYkwKhV5"
+    },
+    {
+      "skillId": "skill_01JUy6vN8PmhmjjJRz8zDm3b",
+      "name": "plative-solution-doc",
+      "description": "Generate a Plative-branded technical solution DOCX after completing any project build, implementation, or client delivery. Use this skill proactively whenever a build is complete, a feature ships, an integration is finished, or a client deliverable is ready — even if the user doesn't explicitly ask for a document. The document captures the full technical story of what was built, following Plative's brand standards. Also triggers on phrases like \"wrap up\", \"create the solution doc\", \"write up the deliverable\", \"generate the tech doc\", or any post-build documentation request.",
+      "source": "plugin",
+      "updatedAt": "2026-09-30T01:02:40.318020Z",
+      "backingPluginId": "plugin_012oLM8yjNxvBaL3yueKjJEx"
+    }
+  ]
+}

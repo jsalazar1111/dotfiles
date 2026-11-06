@@ -1,0 +1,8 @@
+.credentials.json
+.claude.json
+backups/
+projects/
+session-env/
+telemetry/
+sessions/
+state/

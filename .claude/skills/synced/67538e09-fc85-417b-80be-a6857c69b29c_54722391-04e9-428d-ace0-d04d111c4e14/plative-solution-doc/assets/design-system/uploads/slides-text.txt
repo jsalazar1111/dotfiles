@@ -1,0 +1,995 @@
+
+===== SLIDE 1 =====
+Brand Guidelines
+Acceptable use of our brand assets
+0
+2
+.0
+2
+.26
+===== SLIDE 2 =====
+Visual Identity Overview
+03
+Logo Usage
+07
+Typography
+11
+Color Palette
+15
+Graphic Assets
+The following sections provide guidance on  how to use each element of the system.
+When used properly, the visual identity provides a foundation for expressing the Plative story.
+‹#›
+===== SLIDE 3 =====
+Our Logo
+Plative Visual Identity System
+
+‹#›
+===== SLIDE 4 =====
+Our Logo
+Clear Space
+When using our logo, leave enough white space around it’s borders
+Minimum Size
+Symbol
+Horizontal
+Vertical
+
+
+
+
+
+
+
+
+
+Vertical:
+
+
+
+
+
+
+
+
+
+Horizontal:
+
+
+The Lantern:
+‹#›
+
+
+Our logo can be downloaded 
+HERE.
+===== SLIDE 5 =====
+
+Logos
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+When applying the Plative logo onto a white background, standard practice is to use the crimson and black primary version.
+When applying onto a dark background, use the Crimson and white version.
+Do not use an all white, all black or all crimson version.
+The primary Crimson and black logo
+ is to be used against white.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+The primary Crimson and white logo is to be used against dark backgrounds.
+Link to Download Logo Files
+===== SLIDE 6 =====
+Logo Misuse
+‹#›
+Do not alter the proportions of any part of the logo.
+Do not use the word
+mark at an angle.
+Do not add effects such
+as a drop shadow or stroke
+Do not add new fonts to logo.
+Do not place on busy backgrounds or colors.
+Do not remove any parts of the logo or icon.
+Do not change the colors or transparency. 
+
+
+
+
+
+
+
+
+
+Do not use a 1-color version
+===== SLIDE 7 =====
+Typography
+Plative Visual Identity System
+
+‹#›
+===== SLIDE 8 =====
+Open Sans Semi Bold
+Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz
+0123456789  !”#$%’&(
+Title Font
+Open Sans Semi Bold
+Open Sans Light for Sub-Titles
+
+The font
+Open Sans is a humanist sans serif typeface designed by Steve Matteson, Type Director of Ascender Corp. This version contains the complete 897 character set, which includes the standard ISO Latin 1, Latin CE, Greek and Cyrillic character sets. Open Sans was designed with an upright stress, open forms and a neutral, yet friendly appearance. It was optimized for print, web, and mobile interfaces, and has excellent legibility characteristics in its letterforms.
+
+
+
+
+Body Font
+Open Sans Regular
+
+
+Open Sans Regular
+Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk 
+Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu 
+Vv Ww Xx Yy Zz
+0123456789  !”#$%’&(
+‹#›
+
+
+
+Typography
+===== SLIDE 9 =====
+Open Sans Semi Bold for Titles
+Open Sans Light should be used for subtitles
+
+Open Sans Regular should be used for body text. 
+Do Not Use Open Sans Light for Titles
+Do Not Use Open Sans Semi Bold for Subtitles
+
+Do not use Fjalla One, ever. We’re phasing out the font entirely.
+‹#›
+
+
+
+Typography: Do’s and Don’ts
+===== SLIDE 10 =====
+
+
+
+Use Arial. 
+Arial is the default font for Google Slides. We do our best to default the body font in all of our templates to Open Sans, but sometimes it needs to be done manually. 
+Choose
+ 
+Random
+ 
+Fonts
+.
+ 
+Pay 
+close attention to the fonts you are using
+. Whether it’s a deck, 
+document, digital, or physical 
+asset, 
+do not choose any font
+ other than Open Sans 
+
+Use Open Sans. 
+The difference is small, but impactful. In addition, it ensures that our typography remains consistent across all of our assets.
+‹#›
+
+
+Typography: Do’s and Don’ts
+===== SLIDE 11 =====
+Color Palette
+Plative Visual Identity System
+
+‹#›
+===== SLIDE 12 =====
+
+
+
+Soft Navy
+HEX #425582
+R: 66 G: 85 B: 130
+C: 86 M: 76 Y: 24 K: 7
+Gold
+HEX #DEAB57
+R: 222 G: 171 B: 87
+C: 8 M: 36 Y: 85 K: 0
+Navy Blue
+Soft Navy
+Color Palette
+
+
+
+
+
+
+
+
+
+
+
+
+PRIMARY BRAND COLORS
+
+
+SECONDARY BRAND COLORS
+Navy Blue
+HEX #262A42
+R: 38 G: 42 B: 66
+C: 88 M: 81 Y: 46 K: 47
+Deep Teal
+HEX #005957
+R: 0 G: 89 B: 87
+C: 100 M: 42 Y: 62 K: 29
+Teal
+HEX #0D9DA4
+R: 13 G: 157 B: 164
+C: 90 M: 12 Y: 38 K: 0
+Soft Teal
+HEX #9CDAE6
+R: 156 G: 218 B: 230
+C: 41 M: 0 Y: 10 K: 0
+Crimson
+HEX #E
+14136
+R: 225 G: 65 B: 54
+C: 0 M: 96 Y: 93 K: 0
+‹#›
+===== SLIDE 13 =====
+Color Do’s and Don’ts
+Use Dark Text on Dark Backgrounds
+Use Dark Text on Dark Backgrounds
+Use Light Text on Light Backgrounds
+Use Light Text on Light Backgrounds
+Use Light Text on Dark Backgrounds
+Use Light Text on Dark Backgrounds
+Use Dark Text on Light Backgrounds
+Use Dark Text on Light Backgrounds
+‹#›
+
+
+
+Use Light Text on Dark Backgrounds
+Use the previous Corona Red
+Use Dark Text on Light Backgrounds
+
+
+
+Typography + Color
+: Do’s and Don’ts
+
+
+===== SLIDE 14 =====
+‹#›
+
+
+
+REGISTER NOW
+REGISTER NOW
+REGISTER NOW
+REGISTER NOW
+REGISTER NOW
+
+REGISTER NOW
+REGISTER NOW
+REGISTER NOW
+On light/white backgrounds
+On dark backgrounds
+REGISTER NOW
+REGISTER NOW
+REGISTER NOW
+REGISTER NOW
+REGISTER NOW
+
+REGISTER NOW
+On light/white backgrounds
+On dark backgrounds
+REGISTER NOW
+REGISTER NOW
+
+
+
+CTA: 
+Do’s and Don’ts
+
+===== SLIDE 15 =====
+Graphic
+ Assets
+Images grounded in the idea that 
+Plative meets you, wherever you are.
+‹#›
+===== SLIDE 16 =====
+‹#›
+Mountains 1
+Mountains 2
+Prairie
+Gradient 1
+Gradient 2
+Gradient 3
+Gradient 4
+Forest
+City
+Prairie Border
+Forest Border
+City Border
+Mountains Border
+Gradient 5
+
+
+Graphic Assets
+Graphic assets can be downloaded 
+HERE.
+===== SLIDE 17 =====
+Graphic: Mountains 1
+Can be used as a title, transition or large callout.
+‹#›
+===== SLIDE 18 =====
+Graphic: Mountains 2
+Can be used as a title, transition or large callout.
+‹#›
+===== SLIDE 19 =====
+
+Graphic: Mountain Border
+Can be used with a bullet slide, or slides containing a medium amount of copy.
+
+
+‹#›
+===== SLIDE 20 =====
+Graphic: Prairie
+Can be used as a title, transition, large callout or a smaller amount of copy. 
+‹#›
+===== SLIDE 21 =====
+
+Graphic: Prairie Border
+Can be used with a bullet slide, or slides containing a medium amount of copy.
+
+
+‹#›
+===== SLIDE 22 =====
+Graphic: Forest
+Can be used as a title, transition, large callout or a smaller amount of copy.
+‹#›
+===== SLIDE 23 =====
+
+Graphic: Forest Border
+Can be used with a bullet slide, or slides containing a medium amount of copy.
+
+
+‹#›
+===== SLIDE 24 =====
+Graphic: City
+Can be used as a title, transition, large callout or a smaller amount of copy.
+‹#›
+===== SLIDE 25 =====
+
+Graphic: City Border
+Can be used with a bullet slide, or slides containing a medium amount of copy.
+
+
+‹#›
+===== SLIDE 26 =====
+Graphic: Gradient 1
+Can be used as a end slide, transition, large callout or a medium amount of copy with the smaller copy in the darker portion of the gradient. 
+===== SLIDE 27 =====
+Graphic: Gradient 2
+Can be used as a large callout or a medium  amount of copy with the smaller copy in the darker portion of the gradient. 
+
+
+===== SLIDE 28 =====
+Graphic: Gradient 3
+To be used with a graph, chart or larger amount of copy, as long as the font is large/legible enough to read against the blue gradient.
+
+
+===== SLIDE 29 =====
+Graphic: Gradient 4
+To be used with a graph, chart or larger amount of copy, as long as the font is large/legible enough to read against the blue gradient. Use this if imagery is complex, and the aurora would be distracting.
+===== SLIDE 30 =====
+Graphic: Gradient 4
+To be used with a graph, chart or larger amount of copy, as long as the font is large/legible enough to read against the blue gradient. Use this if imagery is complex, and the aurora would be distracting.
+
+
+Graphic: Gradient 5
+To be used with a graph, chart or larger amount of copy. Use this if imagery is complex, and the aurora or dark background would be distracting.
+‹#›
+===== SLIDE 31 =====
+‹#›
+Photography
+
+
+Photography
+===== SLIDE 32 =====
+‹#›
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Framework
+Alert
+Operational agility
+Check / available
+Arrow
+Cloud software
+Secure files
+User experience
+Scale / growth
+Always available
+Code
+Lightbulb
+Search
+Open apps
+Home page
+Insurance / umbrella
+Trash / delete
+Voice / audio
+Org
+Collaboration
+Alignment
+PDF
+ID card
+Battlecard
+Hybrid work
+Trophy
+Contacts
+Add video
+Upload app
+Quick call
+Registration
+Catering / meals
+Calendar
+Event
+Folder / files
+Email
+Notify
+Documents / files
+Laptop
+Documentation
+Calls
+Monitor
+Configure
+Settings
+Global
+Upload
+Notification
+Certified / ribbon
+Apps
+Bolt
+Block kit
+Server
+Rocket
+Star / spark
+Calendar
+Flexible
+Approved Iconography
+
+Iconography
+===== SLIDE 33 =====
+‹#›
+Approved Iconography
+
+Big Iconography (on light backgrounds)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+===== SLIDE 34 =====
+‹#›
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Big Iconography (on dark backgrounds)
+===== SLIDE 35 =====

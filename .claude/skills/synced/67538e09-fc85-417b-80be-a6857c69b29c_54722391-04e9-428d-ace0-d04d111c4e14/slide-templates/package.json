@@ -1,0 +1,12 @@
+{
+  "name": "plative-slide-templates",
+  "version": "1.0.0",
+  "description": "Plative-branded pptxgenjs slide layout helpers",
+  "main": "lib/slideHelpers.js",
+  "scripts": {
+    "example": "node example.js"
+  },
+  "dependencies": {
+    "pptxgenjs": "^4.0.1"
+  }
+}
