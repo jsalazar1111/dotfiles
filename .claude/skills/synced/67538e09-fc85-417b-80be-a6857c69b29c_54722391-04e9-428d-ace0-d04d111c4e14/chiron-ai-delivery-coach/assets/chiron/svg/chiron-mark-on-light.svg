@@ -1,6 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -3 100 103" width="512" height="527" role="img" aria-label="Chiron">
-  <path d="M36 64 Q22 54 22 38 A28 28 0 0 1 78 38 Q78 54 64 64 V72 H36 Z" fill="none" stroke="#262A42" stroke-width="4" stroke-linejoin="round"/>
-  <path d="M38 78 H62 M41 85 H59" stroke="#262A42" stroke-width="4" stroke-linecap="round"/>
-  <path d="M50 27 L53.9 36.1 L63 40 L53.9 43.9 L50 53 L46.1 43.9 L37 40 L46.1 36.1 Z" fill="#E14136"/>
-  <path d="M50 5 V0 M26.7 14.7 L23.1 11.1 M73.3 14.7 L76.9 11.1" stroke="#262A42" stroke-width="3" stroke-linecap="round"/>
-</svg>
